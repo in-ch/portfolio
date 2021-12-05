@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     body{
         font-size:14px;
         color:RGB(24,24,24);
+        scroll-behavior: smooth;
         @media (max-width: 520px) {
             overflow:scroll;
         }
