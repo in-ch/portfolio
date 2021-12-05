@@ -18,12 +18,28 @@ const P1 = styled.p`
 `;
 const P2 = styled.p<Props>`
     font-size:100px;
-    color:white;
     text-overflow:visible;
     white-space: nowrap;
     position:relative;
     left:${(props)=>props.slideData}px;
-    transition: all 1s smooth;
+    transition: all 0.2s smooth;
+    color:#777;
+    &:hover{
+        /* &::after{
+            width: 50%;
+            transition: width .9s;
+        } */
+    }
+    /* &::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        background: rgba(200, 125, 220, .6);
+    } */
 `;
 interface Props {
     slideData:number,

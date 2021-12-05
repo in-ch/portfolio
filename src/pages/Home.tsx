@@ -34,20 +34,34 @@ const Home = () => {
     return(
         <Container>
             <Background />
-            {/* <Intro 
-                slideData={window.pageYOffset}
-            />
-            <SlideText 
-                slideData={window.pageYOffset}
-            />
-            <br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> */}
             <SmoothScroll>
                 <Section >
                     <Intro 
+                        slideData={window.pageYOffset}
+                    />
+                </Section>
+                <Section >
+                    <SlideText 
+                        slideData={window.pageYOffset}
+                    />
+                </Section>
+                <Section >
+                    <SlideText 
+                        slideData={window.pageYOffset}
+                    />
+                </Section>
+                <Section >
+                    <SlideText 
+                        slideData={window.pageYOffset}
+                    />
+                </Section>
+                <Section >
+                    <SlideText 
+                        slideData={window.pageYOffset}
+                    />
+                </Section>
+                <Section >
+                    <SlideText 
                         slideData={window.pageYOffset}
                     />
                 </Section>
