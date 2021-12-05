@@ -57,37 +57,23 @@ const P = styled.p`
 interface Props {
     scrollY:number,
 }
-
-const Intro = () => {
-
-    const [scroll,setScroll] = useState<number>(0);
-    const handleScrollAnimation = (e:any) => {
-        setScroll(window.pageYOffset);
-    }
-    useEffect(() => {
-    window.addEventListener('scroll', (e) => {
-        handleScrollAnimation(e);
-    });
-    
-    return () => {
-        window.removeEventListener('scroll', (e) => {
-        handleScrollAnimation(e);
-        });
-    };
-    }, []);
+interface PropsMain {
+    slideData:number,
+}  
+const Intro = ({slideData}:PropsMain) => {
 
     return (
         <Container>
             <Column>
                 <Row
-                    scrollY={scroll}
+                    scrollY={slideData}
                 >
                     <P>N</P>
                     <P>A</P>
                     <P>M</P>
                     <P>E</P>
                     <Space 
-                        scrollY={scroll}
+                        scrollY={slideData}
                     />
                     <P>I</P>
                     <P>N</P>
