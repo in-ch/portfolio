@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Background from "src/components/Background"
+import DotRing from "src/components/DotRing/DotRing";
 import Intro from "src/components/Intro";
 import SlideText from "src/components/SlideText";
 import SmoothScroll from "src/components/SmoothScroll/SmoothScroll";
+import { MouseContext } from "src/context/mouse-context";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -31,37 +33,15 @@ const Home = () => {
         };
     });
 
+    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
     return(
         <Container>
             <Background />
+            <DotRing />
             <SmoothScroll>
                 <Section >
                     <Intro 
-                        slideData={window.pageYOffset}
-                    />
-                </Section>
-                <Section >
-                    <SlideText 
-                        slideData={window.pageYOffset}
-                    />
-                </Section>
-                <Section >
-                    <SlideText 
-                        slideData={window.pageYOffset}
-                    />
-                </Section>
-                <Section >
-                    <SlideText 
-                        slideData={window.pageYOffset}
-                    />
-                </Section>
-                <Section >
-                    <SlideText 
-                        slideData={window.pageYOffset}
-                    />
-                </Section>
-                <Section >
-                    <SlideText 
                         slideData={window.pageYOffset}
                     />
                 </Section>

@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     *{
         box-sizing:border-box;
+        cursor:none;
     }
     body{
         font-size:14px;

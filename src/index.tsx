@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import MouseContextProvider from './context/mouse-context.js';
 
 ReactDOM.render(
-    <App />,
+  <MouseContextProvider>
+      <App />
+  </MouseContextProvider>,
   document.getElementById('root')
 );

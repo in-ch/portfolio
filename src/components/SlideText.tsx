@@ -55,21 +55,6 @@ const SlideText = ({slideData}:Props) => {
                     slideData={1100 - slideData}
                 >명석하게 그지없고 박식하기 그지없는 수재요.</P2>
             </Container>
-            <Container>
-                <P1>asdf</P1>
-                <P2 
-                    style={{
-                        filter:'flipv()'
-                    }}
-                    slideData={slideData - 1100}
-                >명석하게 그지없고 박식하기 그지없는 수재요.</P2>
-            </Container>
-            <Container>
-                <P1>asdf</P1>
-                <P2
-                    slideData={1100 - slideData}
-                >명석하게 그지없고 박식하기 그지없는 수재요.</P2>
-            </Container>
         </>
     )
 };  
