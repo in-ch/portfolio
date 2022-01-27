@@ -1,9 +1,12 @@
+import { useReactiveVar } from "@apollo/client";
+import { overflow } from "src/apollo/client";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 // import Header from "./Header";
 
-export const GlobalStyle = createGlobalStyle`
+
+export const GlobalStyle = createGlobalStyle<GlobalProps>`
     ${reset}
     input{
         all:unset;
@@ -26,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
         &::-webkit-scrollbar {
             display: none; /* Chrome, Safari, Opera */
         }
+        ${(props)=>props.isOverflow ? 'overflow-y:hidden' : ''}
     }
     a{
         color: inherit;
@@ -37,15 +41,20 @@ export const GlobalStyle = createGlobalStyle`
 type Props = {
     children: JSX.Element,
 }
-
+type GlobalProps = {
+    isOverflow:boolean;
+}
 const Container = styled.div`
     width:100%;
 `;
 
 const Layout = ({children}:Props) => {
+    const isOverflow = useReactiveVar<boolean>(overflow);
     return (
         <>
-            <GlobalStyle />
+            <GlobalStyle 
+                isOverflow={isOverflow}
+            />
             <Container>
                 {/* <Header /> */}
                 {children}

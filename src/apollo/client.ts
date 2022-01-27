@@ -10,6 +10,7 @@ const httpLink = createHttpLink({
 
 export const isLoggedInVar = makeVar(Boolean(localStorage.getItem("incheolisbest")));
 export const cart = makeVar<any>([]);
+export const overflow = makeVar<boolean>(false);
 
 export const logUserIn = (token:string) => {
     localStorage.setItem("incheolisbest",token);
