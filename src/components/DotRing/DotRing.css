@@ -5,7 +5,7 @@
   width: 22px;
   height: 22px;
   /* border: 2px solid rgba(31, 30, 30, 0.808); */
-  border:3px solid white;
+  border:3px solid #000;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   -webkit-transition-duration: 100ms;
@@ -23,7 +23,7 @@
   left: 50%;
   width: 8px;
   height: 8px;
-  background-color: white;
+  background-color: #000;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   z-index: 999;
@@ -34,7 +34,7 @@
   width: 50px;
   height: 50px;
   border-width: 3px;
-  border-color: lightgray;
+  border-color: #000;
 }
 
 .dot.hovered {

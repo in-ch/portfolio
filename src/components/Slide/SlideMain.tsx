@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Card1 from "./Card1";
 
 const Container = styled.div`
     width:100%;
@@ -7,23 +8,8 @@ const Container = styled.div`
     position:relative;
     overflow:hidden;
 `;
-const Card1 = styled.div<CardProps>`
-    width:100%;
-    height:100vh;
-    background-color:red;
-    position:absolute;
-    top:${(props)=>props.slideNum === 1 ? 0 : - window.innerHeight}px;
-    left:0px;
-    transition: all 1s;
-`;
-const Card2 = styled.div<CardProps>`
-    width:100%;
-    height:100vh;
-    background-color:yellow;
-    position:absolute;
-    top:${(props)=>props.slideNum === 1 ? 0 : 0}px;
-    left:0px;
-`;
+
+
 interface Props {
     isSlide:boolean,
     slideNum:number,
@@ -38,10 +24,8 @@ const Slide = ({isSlide,slideNum}:Props) => {
         <Container>
             <Card1
                 slideNum={slideNum}
-            >
-            </Card1>
-            {/* <Card2>
-            </Card2> */}
+                isSlide={isSlide}
+            />
         </Container>
     );
 }
