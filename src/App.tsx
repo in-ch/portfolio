@@ -2,7 +2,7 @@ import { ApolloProvider } from "@apollo/client";
 import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
 import client from "./apollo/client";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
+import Home from "./pages/Home.jsx";
 
 function App() {
   return (

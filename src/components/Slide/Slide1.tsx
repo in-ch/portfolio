@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Card1 from "./Card1";
+import BButton from "../BButton";
 
 const Container = styled.div`
     width:100%;
     height:100vh;
-    background-color:white;
+    background-color:RGB(240,240,240);
     position:relative;
     overflow:hidden;
 `;
@@ -22,10 +22,7 @@ const Slide = ({isSlide,slideNum}:Props) => {
     
     return (
         <Container>
-            <Card1
-                slideNum={slideNum}
-                isSlide={isSlide}
-            />
+            <BButton />
         </Container>
     );
 }
