@@ -91,7 +91,7 @@ const Particle = () => {
                 <Text>
                     <TypeAnimation
                         cursor={true}
-                        sequence={['인쵸리는 오늘도 달리는 중 ...!!', 4000, '늘.. 열.. 심.. 히.. ㅋㅋ']}
+                        sequence={[7000,'인쵸리는 오늘도 달리는 중 !!!!', 3000, '늘   열   심   히.. ㅋㅋ']}
                         wrapper="h2"
                     />
                 </Text>

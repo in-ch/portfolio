@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import DotRing from "src/components/DotRing/DotRing";
-import Slide from "src/components/Slide/Slide1";
 import styled from "styled-components";
 import Particle from "src/components/Particle";
+import Loading from "src/components/Loading";
 
 const Container = styled.div`
     p{
@@ -67,6 +67,7 @@ const Home = () => {
 
     return(
         <Container onWheel={scrollEvent}>
+            <Loading />
             {/* <DotRing /> */}
                 <Section>
                   <Particle />
