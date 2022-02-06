@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Particles from "react-tsparticles";
 import TypeAnimation from 'react-type-animation';
 import "../assets/font/font.css";
+import { useEffect, useState } from "react";
 
 const Container = styled.div`
     width:100%;
@@ -21,18 +22,44 @@ const Text = styled.p`
     position:relative;
     left:42px;
     font-family:"sf";
+    @media (max-width: 520px) {
+        left:20px;
+    }
 `;
 
 const Particle = () => {
 
+    const [size, setSize] = useState(true);
+
     const particlesInit = (main) => {
-        console.log(main);
     };
 
     const particlesLoaded = (container) => {
-        console.log(container);
     };
     
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => { 
+          window.removeEventListener('resize', handleResize);
+        }
+    }, []);
+
+    useEffect(()=>{
+        if(window.innerWidth<520){
+            setSize(true);
+        } else {
+            setSize(false);
+        }
+    },[])
+    
+    const handleResize = () => {
+        if(window.innerWidth<520){
+            setSize(true);
+        } else {
+            setSize(false);
+        }
+    }
+
     return (
         <Container>
             <Particles id="tsparticles"
@@ -40,15 +67,13 @@ const Particle = () => {
                 loaded={particlesLoaded}
                 options={{
                     background: {
-                    color: {
+                    color: { 
                         value: "#043564",
                     },
                     image:"url('http://vincentgarreau.com/particles.js/assets/img/kbLd9vb_new.gif')",
-                    // position:"120% 40%",
-                    position:"0% 40%",
+                    position: size ? "120% 40%" : "0% 40%",
                     repeat: "no-repeat",
-                    size:"200%",
-                    size:"60%",
+                    size: size ? "200%" : "60%",
                     opacity:1
                     },
                     backgroundMask:{
