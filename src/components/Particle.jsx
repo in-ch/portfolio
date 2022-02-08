@@ -8,10 +8,12 @@ const Container = styled.div`
     width:100%;
     height:100vh;
     position:relative;
-    display:flex;
+    display:${(props)=>props.display ? 'flex' : 'none'};
     justify-content:center;
     align-items:center;
     margin-top:50px;
+    opacity:${(props)=>props.hide ? 0 : 1};
+    transition: all 2s;
 `;
 const Text = styled.p`
     width:300px;
@@ -27,10 +29,13 @@ const Text = styled.p`
     }
 `;
 
+
 const Particle = () => {
 
     const [size, setSize] = useState(true);
-
+    const [hide, setHide] = useState(false);
+    const [display, setDisplay] = useState(true);
+    
     const particlesInit = (main) => {
     };
 
@@ -50,6 +55,12 @@ const Particle = () => {
         } else {
             setSize(false);
         }
+        setTimeout(() => {
+            setHide(true);
+        }, 15000);
+        setTimeout(() => {
+            setDisplay(false);
+        },17000);
     },[])
     
     const handleResize = () => {
@@ -61,7 +72,10 @@ const Particle = () => {
     }
 
     return (
-        <Container>
+        <Container 
+            hide={hide}
+            display={display}
+        >
             <Particles id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
