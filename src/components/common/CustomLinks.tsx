@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { BiGroup, BiHome, BiJoystick, BiStore, BiUser  } from 'react-icons/bi'
+import { BiHome, BiJoystick, BiStore, BiUser  } from 'react-icons/bi'
 import { FaUsers } from 'react-icons/fa'
 
 const CustomLinks = () => {

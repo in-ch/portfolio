@@ -1,14 +1,9 @@
-import { BiMenu  } from 'react-icons/bi'
 import CustomLinks from './CustomLinks'
 
 
 function SideBar() {
   return (
-    <>
-      <BiMenu
-        className="absolute top-3 left-1 z-[99]
-       cursor-pointer text-3xl text-white xtab:hidden"
-      />
+    <nav className="fixed top-16">
       <div
         className={`absolute top-0 left-0 right-0 bottom-0 z-20 xtab:hidden`}
       ></div>
@@ -24,7 +19,7 @@ function SideBar() {
           <CustomLinks />
         </div>
       </div>
-    </>
+    </nav>
   )
 }
 
