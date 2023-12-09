@@ -2,7 +2,6 @@ import { BiMenu  } from 'react-icons/bi'
 import CustomLinks from './CustomLinks'
 
 
-
 function SideBar() {
   return (
     <>
