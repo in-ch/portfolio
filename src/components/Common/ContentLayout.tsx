@@ -17,7 +17,7 @@ const ContentLayout = ({
 }: ContentLayoutProps): JSX.Element => {
   return (
     <div className="w-full max-w-[1270px]" style={style}>
-      {children}
+        {children}
     </div>
   );
 };

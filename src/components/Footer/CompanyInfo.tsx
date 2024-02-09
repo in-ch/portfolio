@@ -5,12 +5,11 @@
 const CompanyInfo = (): JSX.Element => {
   return (
     <address>
-      <p className="mt-2 mr-4 font-normal not-italic text-xs"></p>
-
-      <p className="text-xs font-normal not-italic  leading-4 text-left text-gray-600 mt-2">
+      <p className="mr-4 mt-2 text-xs font-normal not-italic"></p>
+      <p className="mt-2 text-left text-xs  font-normal not-italic leading-4 text-gray-600">
         Copyright © 2024 . All rights reserved.
       </p>
-      <p className="h-max-content text-xs font-normal not-italic  leading-4 text-left text-orange-500">
+      <p className="h-max-content text-left text-xs font-normal  not-italic leading-4 text-orange-500">
         개인정보처리방침
       </p>
     </address>

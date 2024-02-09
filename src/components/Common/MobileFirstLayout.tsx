@@ -12,7 +12,7 @@ const MobileFirstLayout = ({
   children: ReactNode;
 }): JSX.Element => {
   const gradientStyle = {
-    background: "linear-gradient(in oklab, #f8fefe, #e3faff, #d5fff9)",
+                           background: "linear-gradient(in oklab, #f8fefe, #e3faff, #d5fff9)",
   };
 
   return (
