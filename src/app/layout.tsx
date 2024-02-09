@@ -2,7 +2,6 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import Providers from '@/components/Common/Provider';
 import MobileFirstLayout from '@/components/Common/MobileFirstLayout';
-import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +17,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <MobileFirstLayout>{children}</MobileFirstLayout>
         </Providers>
-        <Footer />
       </body>
     </html>
   );

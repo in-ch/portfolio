@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        xs: '320px',
+        md: '420px',
+      },
       colors: {
         lightBackground: '#F4F8FA',
         border: 'hsl(var(--border))',

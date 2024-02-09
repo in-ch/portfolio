@@ -8,7 +8,7 @@ import SnsLink from '@/components/Footer/SnsLink';
  */
 const Footer = (): JSX.Element => {
   return (
-    <footer className="flex justify-center bg-white">
+    <footer className="mt-2 flex justify-center">
       <ContentLayout>
         <SnsLink />
         <CompanyInfo />
@@ -20,10 +20,6 @@ const Footer = (): JSX.Element => {
           <a itemProp="sameAs" aria-label="트위터" href="https://twitter.com/test" />
           <a itemProp="sameAs" aria-label="블로그" href="https://blog.naver.com/test" />
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
       </ContentLayout>
     </footer>
   );
