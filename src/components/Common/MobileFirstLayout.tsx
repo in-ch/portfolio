@@ -11,13 +11,11 @@ import Footer from '@/components/Footer';
  */
 const MobileFirstLayout = ({ children }: { children: ReactNode }): JSX.Element => {
   return (
-    <div className="bg-red mx-auto w-full max-w-4xl">
-      <div className="h-screen p-4 md:p-2">
-        <div className="h-full w-full overflow-scroll rounded-xl bg-white">
-          <Header />
-          <main className="h-full">{children}</main>
-          <Footer />
-        </div>
+    <div className="mx-auto w-full max-w-4xl">
+      <div className="w-full overflow-scroll rounded-xl">
+        <Header />
+        <main className="min-h-56 px-4 pt-32">{children}</main>
+        <Footer />
       </div>
     </div>
   );
