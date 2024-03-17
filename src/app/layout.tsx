@@ -1,7 +1,7 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
+import '@/styles/globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import Provider from '@/components/common/Provider';
+import Header from '@/components/header';
 
 export const metadata = {
   title: '개발 중',
@@ -12,7 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body>
+        <Provider>
+          <Header />
           {children}
+        </Provider>
       </body>
     </html>
   );
