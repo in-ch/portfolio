@@ -20,7 +20,7 @@ const config = {
     extend: {
       screens: {
         xs: '320px',
-        md: '420px',
+        md: '500px',
       },
       colors: {
         lightBackground: '#F4F8FA',
@@ -72,10 +72,15 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        pulse: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'custom-pulse': 'pulse 1.5s infinite',
       },
     },
   },
