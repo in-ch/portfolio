@@ -14,7 +14,7 @@ interface Props {
  * @description 커몬 버튼
  * @returns {React.ReactElement}
  */
-export const Button = ({ onClick }: Props): React.ReactElement => {
+export const ButtonDown = ({ onClick }: Props): React.ReactElement => {
   const headerShow = useRecoilValue(headerShowState);
 
   return (
@@ -24,7 +24,7 @@ export const Button = ({ onClick }: Props): React.ReactElement => {
     >
       {!headerShow && (
         <>
-          <div className="w-12 h-12 bg-black bg-opacity-40 rounded-full absolute animate-pulse"></div>
+          <div className="w-12 h-12 bg-black bg-opacity-40 rounded-full absolute animate-custom-pulse"></div>
           <TbArrowBigDownLinesFilled className="text-white text-opacity-90 text-2xl" />
         </>
       )}

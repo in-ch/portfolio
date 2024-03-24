@@ -2,13 +2,16 @@
 
 import { TypeAnimation } from 'react-type-animation';
 
-import { Button } from '@/components/common/Button';
+import { ButtonDown } from '@/components/common/ButtonDown';
 import { Mountain } from '@/components/intro/Mountain';
+import { SECTION } from '@/enum';
+import { useMoveToSection } from '@/hooks/useMoveToSection';
 
-const Intro = () => {
+const Intro = (): JSX.Element => {
+  const { handleMove } = useMoveToSection();
   return (
     <section
-      id="Intro"
+      id={SECTION.intro}
       className="text-9xl w-screenrelative font-bold h-screen overflow-hidden flex justify-center items-start pt-[120px] font-PyeongChangPeace"
     >
       <div className="md:w-1/2 w-3/4">
@@ -27,8 +30,8 @@ const Intro = () => {
           wrapper="h5"
         />
       </div>
-      <div className="absolute w-full flex justify-center top-3/4">
-        <Button onClick={() => console.log('about')} />
+      <div className="absolute w-full flex justify-center top-[85%] md:top-3/4">
+        <ButtonDown onClick={() => handleMove(SECTION.about)} />
       </div>
       <Mountain />
     </section>
