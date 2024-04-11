@@ -17,7 +17,7 @@ const Portfolio = (): JSX.Element => {
       <div className="w-full h-screen flex flex-row justify-center">
         <div className="max-w-[1000px] w-full h-screen flex flex-col gap-6 py-[60px] md:py-[100px] px-[20px] md:px-[0px]">
           <TransitionText texts={['Portfolio', 'in-ch']} />
-          <div className="grid grid-cols-3 gap-[70px] my-[40px] pb-[40px]">
+          <div className="grid sm:grid-cols-3 md:grid-cols-2 gap-[70px] my-[40px] pb-[40px] justify-center">
             <Item />
             <Item />
             <Item />
