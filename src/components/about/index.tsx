@@ -4,15 +4,14 @@ import { FaGithub } from 'react-icons/fa6';
 import { SiVelog } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
 
-import { ButtonUp } from '@/components/common/ButtonUp';
-import { ButtonDown } from '@/components/common/ButtonDown';
 import TransitionText from '@/components/common/TransitionText';
-import { useMoveToSection } from '@/hooks/useMoveToSection';
 import { SECTION } from '@/enum';
 
+/**
+ * @description About Section
+ * @returns {JSX.Element}
+ */
 const About = (): JSX.Element => {
-  const { handleMove } = useMoveToSection();
-
   return (
     <section id={SECTION.about} className="w-screen h-screen font-bold relative overflow-scroll">
       <div className="w-full h-screen flex flex-row justify-center">
@@ -81,10 +80,10 @@ const About = (): JSX.Element => {
           <div>
             <p className="text-[20px] font-black">Frontend</p>
             <ul className="ml-6 mt-2 gap-2 flex flex-col">
-              <li>Javascript, Typescript, React, React-Native, Vue</li>
-              <li>Next.js, Vite.js</li>
+              <li>Javascript, Typescript, React, React-Native, Next.js</li>
               <li>css-in-js, tailwindcss</li>
               <li>Flutter</li>
+              <li>Electron</li>
             </ul>
           </div>
           <div>
@@ -104,10 +103,6 @@ const About = (): JSX.Element => {
           <p className="text-white">a</p>
           <p className="text-white">a</p>
         </div>
-      </div>
-      <div className="absolute w-full flex justify-center top-[85%] md:top-3/4">
-        <ButtonUp onClick={() => handleMove(SECTION.intro)} />
-        <ButtonDown onClick={() => handleMove(SECTION.portfolio)} />
       </div>
     </section>
   );

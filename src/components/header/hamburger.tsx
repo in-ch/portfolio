@@ -6,8 +6,18 @@ import { IoIosClose } from 'react-icons/io';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 import { headerShowState } from '@/atom';
+import { SECTION_TYPE, SECTION } from '@/enum';
 
-const Hamburger = (): JSX.Element => {
+interface HamburgerProps {
+  handleMove: (value: SECTION_TYPE) => void;
+}
+
+/**
+ * @description 모바일 헤더 컴포넌트
+ * @param {(value: SECTION_TYPE) => void}  handleMove 특정 section으로 이동
+ * @returns {JSX.Element}
+ */
+const Hamburger = ({ handleMove }: HamburgerProps): JSX.Element => {
   const headerShowChange = useSetRecoilState(headerShowState);
   const headerShow = useRecoilValue(headerShowState);
   const [show, setShow] = useState<boolean>(false);
@@ -27,11 +37,11 @@ const Hamburger = (): JSX.Element => {
           <IoIosClose className="w-[50px] h-[50px] mt-1" onClick={() => headerShowChange(false)} />
         </div>
         <ul className="flex flex-col text-2xl gap-6 ml-6">
-          <li>home</li>
-          <li>about</li>
-          <li>portfolio</li>
-          <li>blog</li>
-          <li>contact</li>
+          <li onClick={() => handleMove(SECTION.intro)}>home</li>
+          <li onClick={() => handleMove(SECTION.about)}>about</li>
+          <li onClick={() => handleMove(SECTION.portfolio)}>portfolio</li>
+          <li onClick={() => handleMove(SECTION.blog)}>blog</li>
+          <li onClick={() => handleMove(SECTION.contact)}>contact</li>
         </ul>
       </div>
     </section>

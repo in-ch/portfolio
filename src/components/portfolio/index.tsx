@@ -1,17 +1,34 @@
 'use client';
 
-import { ButtonUp } from '@/components/common/ButtonUp';
-import { ButtonDown } from '@/components/common/ButtonDown';
+import TransitionText from '@/components/common/TransitionText';
+import Item from '@/components/common/Item';
 import { SECTION } from '@/enum';
-import { useMoveToSection } from '@/hooks/useMoveToSection';
 
+/**
+ * @description Portfolio Section
+ * @returns {JSX.Element}
+ */
 const Portfolio = (): JSX.Element => {
-  const { handleMove } = useMoveToSection();
   return (
-    <section id={SECTION.portfolio} className="w-screen h-screen bg-red-300 relative">
-      <div className="absolute w-full flex justify-center top-[85%] md:top-3/4">
-        <ButtonUp onClick={() => handleMove(SECTION.about)} />
-        <ButtonDown onClick={() => handleMove(SECTION.blog)} />
+    <section
+      id={SECTION.portfolio}
+      className="w-screen h-screen bg-[#f8f8f8] relative overflow-scroll"
+    >
+      <div className="w-full h-screen flex flex-row justify-center">
+        <div className="max-w-[1000px] w-full h-screen flex flex-col gap-6 py-[60px] md:py-[100px] px-[20px] md:px-[0px]">
+          <TransitionText texts={['Portfolio', 'in-ch']} />
+          <div className="grid grid-cols-3 gap-[70px] my-[40px] pb-[40px]">
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -2,13 +2,14 @@
 
 import { TypeAnimation } from 'react-type-animation';
 
-import { ButtonDown } from '@/components/common/ButtonDown';
 import { Mountain } from '@/components/intro/Mountain';
 import { SECTION } from '@/enum';
-import { useMoveToSection } from '@/hooks/useMoveToSection';
 
+/**
+ * @description Intro Section
+ * @returns {JSX.Element}
+ */
 const Intro = (): JSX.Element => {
-  const { handleMove } = useMoveToSection();
   return (
     <section
       id={SECTION.intro}
@@ -29,9 +30,6 @@ const Intro = (): JSX.Element => {
           sequence={[1000, 'in-ch']}
           wrapper="h5"
         />
-      </div>
-      <div className="absolute w-full flex justify-center top-[85%] md:top-3/4">
-        <ButtonDown onClick={() => handleMove(SECTION.about)} />
       </div>
       <Mountain />
     </section>

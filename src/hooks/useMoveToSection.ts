@@ -1,3 +1,6 @@
+import { useSetRecoilState } from 'recoil';
+
+import { sectionState } from '@/atom';
 import { SECTION_TYPE } from '@/enum';
 
 /**
@@ -5,6 +8,7 @@ import { SECTION_TYPE } from '@/enum';
  * @returns {{ handleMove: (sectionId: string) => void }}
  */
 export const useMoveToSection = (): { handleMove: (sectionId: SECTION_TYPE) => void } => {
+  const setSection = useSetRecoilState(sectionState);
   const handleMove = (sectionId: SECTION_TYPE) => {
     const sectionElement = document.getElementById(sectionId);
     const sectionTop = sectionElement?.getBoundingClientRect().top as number;
@@ -13,6 +17,7 @@ export const useMoveToSection = (): { handleMove: (sectionId: SECTION_TYPE) => v
       top: window.scrollY + sectionTop,
       behavior: 'smooth',
     });
+    setSection(sectionId);
   };
 
   return { handleMove };

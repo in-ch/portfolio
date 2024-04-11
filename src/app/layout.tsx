@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 
 import Provider from '@/components/common/Provider';
 import Header from '@/components/header';
+import Remote from '@/components/remote';
 
 export const metadata = {
   title: '개발 중',
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Provider>
           <Header />
           {children}
+          <Remote />
         </Provider>
       </body>
     </html>
