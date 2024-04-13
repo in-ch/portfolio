@@ -82,7 +82,6 @@ const DialogProvider: FC<Props> = ({ children }: { children: React.ReactNode }) 
               <button onClick={handleCancel} className="">
                 Close
               </button>
-              {/* <button>Go to App</button> */}
               <GoToApp />
             </div>
           </div>
