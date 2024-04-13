@@ -12,4 +12,9 @@ const sectionState = atom<SECTION_TYPE>({
   default: SECTION.intro,
 });
 
-export { headerShowState, sectionState };
+const dialogState = atom<boolean>({
+  key: 'dialogState',
+  default: false,
+});
+
+export { headerShowState, sectionState, dialogState };

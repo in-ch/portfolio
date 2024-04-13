@@ -21,6 +21,10 @@ const config = {
       screens: {
         xs: '320px',
         md: '500px',
+        ipadPro: '1024px',
+        ipadMini: '768px',
+        ipadAir: '820px',
+        desktop: '1100px',
       },
       colors: {
         lightBackground: '#F4F8FA',
@@ -76,11 +80,18 @@ const config = {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.5' },
         },
+        ping: {
+          '75%, 100%': {
+            transform: 'scale(1.2)',
+            opacity: 0.8,
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'custom-pulse': 'pulse 1.5s infinite',
+        'custom-ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1)',
       },
     },
   },

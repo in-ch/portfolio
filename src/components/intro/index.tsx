@@ -15,9 +15,9 @@ const Intro = (): JSX.Element => {
       id={SECTION.intro}
       className="text-9xl w-screenrelative font-bold h-screen overflow-hidden flex justify-center items-start pt-[120px] font-PyeongChangPeace"
     >
-      <div className="md:w-1/2 w-3/4">
+      <div className="w-3/4 desktop:w-2/4 ipadMini:w-3/5">
         <TypeAnimation
-          className="text-[50px] md:text-[120px]"
+          className="text-[50px] md:text-[80px] ipadMini:text-[80px] desktop:text-[120px]"
           role="heading"
           cursor={false}
           sequence={[100, 'FRONTEND DEVELOPER']}

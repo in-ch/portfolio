@@ -15,7 +15,7 @@ const About = (): JSX.Element => {
   return (
     <section id={SECTION.about} className="w-screen h-screen font-bold relative overflow-scroll">
       <div className="w-full h-screen flex flex-row justify-center">
-        <div className="max-w-[1000px] w-full h-screen flex flex-col gap-6 py-[60px] md:py-[100px] px-[20px] md:px-[0px]">
+        <div className="max-w-[1000px] w-full h-screen flex flex-col gap-6 py-[60px] md:py-[100px] px-[20px] ipadPro:px-[0px]">
           <TransitionText texts={['성인철', 'in-ch']} />
           <div className="h-8" />
           <p>안녕하세요.</p>

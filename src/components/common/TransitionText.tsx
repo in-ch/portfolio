@@ -5,13 +5,15 @@ import TextTransition, { presets } from 'react-text-transition';
 
 interface TransitionTextProps {
   texts: string[];
+  className?: string;
 }
 
 /**
  * @param {string[]} texts 텍스트 애니메이션에 들어갈 텍스트들
+ * @param {string} className 커스텀 클래스 네임
  * @returns {JSX.Element}
  */
-const TransitionText = ({ texts }: TransitionTextProps): JSX.Element => {
+const TransitionText = ({ texts, className = '' }: TransitionTextProps): JSX.Element => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -23,8 +25,10 @@ const TransitionText = ({ texts }: TransitionTextProps): JSX.Element => {
   }, []);
 
   return (
-    <h1 className="text-[50px] h-[80px]">
-      <TextTransition springConfig={presets.wobbly}>{texts[index % texts.length]}</TextTransition>
+    <h1 className={`text-[50px] h-[80px] ${className}`}>
+      <TextTransition className={className} springConfig={presets.wobbly}>
+        {texts[index % texts.length]}
+      </TextTransition>
     </h1>
   );
 };
