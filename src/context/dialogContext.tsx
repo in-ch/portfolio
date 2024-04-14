@@ -33,11 +33,6 @@ const DialogProvider: FC<Props> = ({ children }: { children: React.ReactNode }) 
     setDialog(null);
   };
 
-  const handleContinue = () => {
-    setDialog(null);
-    if (dialog !== null && dialog !== undefined) dialog.event !== undefined && dialog.event();
-  };
-
   useEffect(() => {
     if (dialog) {
     }
