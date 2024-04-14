@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useRecoilState } from 'recoil';
+import Link from 'next/link';
 
 import {
   Drawer,
@@ -10,12 +12,15 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/drawer';
+import { itemState } from '@/atom';
+import { LinkType } from '@/types';
 
 /**
  * @description Go To App 모달
  * @returns {JSX.Element}
  */
 export function GoToApp() {
+  const [itemRecoil] = useRecoilState(itemState);
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -31,14 +36,20 @@ export function GoToApp() {
             <DrawerDescription className="mt-2">Please Click Buttons</DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
-            <button className="border rounded-[10px] bg-[#1f1f1f] text-white h-[40px]">
-              Android
-            </button>
-            <button className="border rounded-[10px] bg-[#1f1f1f] text-white h-[40px]">IOS</button>
-            <button className="border rounded-[10px] bg-[#1f1f1f] text-white h-[40px]">
-              Github
-            </button>
-            <button className="border rounded-[10px] bg-[#1f1f1f] text-white h-[40px]">Web</button>
+            {itemRecoil.links.map((itemLink: LinkType) => {
+              return (
+                <Link
+                  href={itemLink.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  key={`item-detail-link-${itemLink.title}`}
+                >
+                  <div className="w-full border rounded-[10px] bg-[#1f1f1f] flex justify-center">
+                    <button className="text-white h-[40px]">{itemLink.title}</button>
+                  </div>
+                </Link>
+              );
+            })}
             <DrawerClose asChild>
               <button className="border rounded-[10px] bg-white h-[40px] shadow-lg">Cancel</button>
             </DrawerClose>

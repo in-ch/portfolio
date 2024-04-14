@@ -1,6 +1,7 @@
 import { atom } from 'recoil';
 
 import { SECTION, SECTION_TYPE } from '@/enum';
+import { ItemType } from '@/types';
 
 const headerShowState = atom<boolean>({
   key: 'headerShowState',
@@ -17,4 +18,15 @@ const dialogState = atom<boolean>({
   default: false,
 });
 
-export { headerShowState, sectionState, dialogState };
+const itemState = atom<ItemType>({
+  key: 'itemState',
+  default: {
+    title: '',
+    description: [],
+    date: '',
+    imgs: [],
+    links: [{ title: '', link: '' }],
+  },
+});
+
+export { headerShowState, sectionState, dialogState, itemState };
