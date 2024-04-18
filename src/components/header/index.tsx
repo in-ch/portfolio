@@ -5,6 +5,7 @@ import { FaGithub } from 'react-icons/fa6';
 import Hamburger from '@/components/header/hamburger';
 import { SECTION } from '@/enum';
 import { useMoveToSection } from '@/hooks/useMoveToSection';
+import { useEffect } from 'react';
 
 /**
  * @description 헤더 컴포넌트
@@ -12,6 +13,20 @@ import { useMoveToSection } from '@/hooks/useMoveToSection';
  */
 const Header = (): JSX.Element => {
   const { handleMove } = useMoveToSection();
+
+  const handleToTop = (): void => {
+    window.scrollTo(0, 0);
+    handleMove(SECTION.intro);
+  };
+
+  useEffect((): (() => void) => {
+    handleToTop();
+    window.addEventListener('resize', handleToTop);
+
+    return () => {
+      window.removeEventListener('resize', handleToTop);
+    };
+  }, []);
 
   return (
     <header className="fixed z-[1000] top-0 left-0 h-[60px] md:h-[70px] w-screen flex flex-row justify-between px-4 md:px-8 items-center">
