@@ -22,6 +22,11 @@ const Hamburger = ({ handleMove }: HamburgerProps): JSX.Element => {
   const headerShow = useRecoilValue(headerShowState);
   const [show, setShow] = useState<boolean>(false);
 
+  const handleClick = (section: SECTION_TYPE): void => {
+    handleMove(section);
+    headerShowChange(false);
+  };
+
   useEffect(() => {
     setShow(headerShow);
   }, [headerShow]);
@@ -37,11 +42,11 @@ const Hamburger = ({ handleMove }: HamburgerProps): JSX.Element => {
           <IoIosClose className="w-[50px] h-[50px] mt-1" onClick={() => headerShowChange(false)} />
         </div>
         <ul className="flex flex-col text-2xl gap-6 ml-6">
-          <li onClick={() => handleMove(SECTION.intro)}>home</li>
-          <li onClick={() => handleMove(SECTION.about)}>about</li>
-          <li onClick={() => handleMove(SECTION.portfolio)}>portfolio</li>
-          <li onClick={() => handleMove(SECTION.blog)}>blog</li>
-          <li onClick={() => handleMove(SECTION.contact)}>contact</li>
+          <li onClick={() => handleClick(SECTION.intro)}>home</li>
+          <li onClick={() => handleClick(SECTION.about)}>about</li>
+          <li onClick={() => handleClick(SECTION.portfolio)}>portfolio</li>
+          <li onClick={() => handleClick(SECTION.blog)}>blog</li>
+          <li onClick={() => handleClick(SECTION.contact)}>contact</li>
         </ul>
       </div>
     </section>
