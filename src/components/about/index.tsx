@@ -3,6 +3,7 @@
 import { FaGithub } from 'react-icons/fa6';
 import { SiVelog } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
+import Link from 'next/link';
 
 import TransitionText from '@/components/common/TransitionText';
 import ContributeView from '@/components/about/contribute-view';
@@ -56,26 +57,21 @@ const About = (): JSX.Element => {
               <span className="bg-primary py-[2px] px-[5px] rounded-[5px] text-[#fff]">
                 하루키의 법칙
               </span>
-              을 매일매일 실천하고 있습니다.
+              을 매일 매일 실천하고 있습니다.
             </li>
-            <li>개발하는 것이 즐겁습니다.</li>
+            <li>개발하는 것이 즐거워 훈련소에 개발 관련 서적을 들고가 뺏긴 전적이 있습니다.</li>
           </ul>
 
           <div className="my-[30px] flex flex-row gap-4">
-            <div>
+            <Link href="mailto:sxin2949@naver.com">
               <MdEmail className="w-[30px] h-[30px]" />
-            </div>
-            <div className="cursor-pointer">
+            </Link>
+            <Link href="https://github.com/in-ch" target="_blank" className="cursor-pointer">
               <FaGithub className="w-[30px] h-[30px]" />
-            </div>
-            <div>
+            </Link>
+            <Link href="https://velog.io/@sxin2949/posts" target="_blank">
               <SiVelog className="w-[30px] h-[30px]" />
-            </div>
-          </div>
-          <p className="text-[30px] text-primary mt-[50px]">Education</p>
-          <div>
-            <p>서울과학기술대학교 (2014.03 ~ 2022.02)</p>
-            <p className="font-thin text-[14px]">- 건설시스템디자인공학과</p>
+            </Link>
           </div>
           <p className="text-[30px] text-primary mt-[50px]">CAREER</p>
           <div className="pb-[20px]">
@@ -90,8 +86,8 @@ const About = (): JSX.Element => {
               ]}
               lis={[
                 '- Vue 기반의 서비스를 Next.js의 React 기반으로 주도적 마이그레이션',
-                '- WebRTC를 활용한 비대면 화상 채팅 서비스 구현',
-                '- 디버깅 툴을 활용해 Memory leak 현상 수정 (성능 개선)',
+                '- WebRTC를 활용한 비대면 화상 채팅 서비스 개발',
+                '- WebRTC를 활용한 원격 컨텐츠 실행 기능 개발',
               ]}
             />
             <ContributeView
@@ -128,7 +124,7 @@ const About = (): JSX.Element => {
                 '- Lighthouse 점수 개선: 평균 80점 대 점수에서 95점 점수까지 향상',
                 '- TBT(Total Blocking Time) 개선 (LCP 4.2s 1.4s로 개선, Cumulative Layout Shift 개선)',
                 '- 네이버 맵과 구글맵을 활용하여 사용병원 및 기관 페이지 개발 (https://www.neofect.com/kr/clinical-partners)',
-                '- Zapier를 통한 국가별 문의 분기 처리',
+                '- Zapier Webhook을 통한 국가별 문의 분기 처리',
                 '- 상품 상세 페이지 추가 개발 등',
               ]}
             />
@@ -168,6 +164,11 @@ const About = (): JSX.Element => {
                 '- AWS EC2, Load Balancer, Route 53, Docker를 활용한 서비스 배포',
               ]}
             />
+          </div>
+          <p className="text-[30px] text-primary mt-[50px]">Education</p>
+          <div>
+            <p>서울과학기술대학교 (2014.03 ~ 2022.02)</p>
+            <p className="font-thin text-[14px]">- 건설시스템디자인공학과</p>
           </div>
           <p className="text-[30px] text-primary mt-[50px]">SKILLS</p>
           <div>
