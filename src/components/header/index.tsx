@@ -8,6 +8,8 @@ import Hamburger from '@/components/header/hamburger';
 import { SECTION } from '@/enum';
 import { useMoveToSection } from '@/hooks/useMoveToSection';
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+
 /**
  * @description 헤더 컴포넌트
  * @returns {JSX.Element}
@@ -16,8 +18,10 @@ const Header = (): JSX.Element => {
   const { handleMove } = useMoveToSection();
 
   const handleToTop = (): void => {
-    window.scrollTo(0, 0);
-    handleMove(SECTION.intro);
+    if (!isMobile) {
+      window.scrollTo(0, 0);
+      handleMove(SECTION.intro);
+    }
   };
 
   useEffect((): (() => void) => {
