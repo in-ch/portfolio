@@ -1,23 +1,28 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import '@/styles/globals.css';
 
-import './globals.css'
+import Provider from '@/components/common/Provider';
+import Header from '@/components/header';
+import Remote from '@/components/remote';
 
-const inter = Inter({ subsets: ['latin'] })
+export const metadata = {
+  title: '성인철 - 이력서',
+  description: '프론트엔드 개발자입니다.',
+  openGraph: {
+    title: '성인철',
+    description: '프론트엔드 개발자입니다.',
+  },
+};
 
-export const metadata: Metadata = {
-  title: 'cotton apple',
-  description: '영화 리뷰 사이트',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ko">
+      <body className="overflow-hidden">
+        <Provider>
+          <Header />
+          {children}
+          <Remote />
+        </Provider>
+      </body>
     </html>
-  )
+  );
 }
