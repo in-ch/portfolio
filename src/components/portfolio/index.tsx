@@ -29,7 +29,7 @@ const Portfolio = (): JSX.Element => {
         '이를 해결하기 위해 간단하게 해당 라이브러리만 쓰면 되게끔 구축하였습니다.',
         '모노레포 시스템으로 구축하였습니다.',
       ],
-      imgs: ['/images/tui-next-date-picker.gif'],
+      imgs: ['https://in-ch.github.io/portfolio/images/tui-next-date-picker.gif'],
       date: '2022.12.01 - 2023.03.01',
       links: [
         { title: 'npm', link: 'https://www.npmjs.com/package/nextjs-tui-date-picker' },
@@ -43,7 +43,7 @@ const Portfolio = (): JSX.Element => {
         'Storybook을 활용해 라이브러리를 문서화하였습니다.',
         'react-toggle-list와 react-filder-list로 두 개의 라이브러리를 모노레포를 구축하였습니다.',
       ],
-      imgs: ['/images/react-toggle-file-tree.gif'],
+      imgs: ['https://in-ch.github.io/portfolio/images/react-toggle-file-tree.gif'],
       date: '2023.07.01 - 2023.09.01',
       links: [
         { title: 'npm', link: 'https://www.npmjs.com/package/nextjs-tui-date-picker' },
@@ -59,7 +59,7 @@ const Portfolio = (): JSX.Element => {
         '소리 측정을 통해 실시간 애니메이션을 제작하여 앱에 전송하는 기능을 추가 개발하였습니다.',
         '애니메이션을 더 쉽게 제작하기 위한 웹페이지를 신규로 개발하였습니다.',
       ],
-      imgs: ['/images/chemin-color-img-1.jpg', '/images/chemin-color-img-2.jpg'],
+      imgs: ['https://in-ch.github.io/portfolio/images/chemin-color-img-1.jpg', 'https://in-ch.github.io/portfolio/images/chemin-color-img-2.jpg'],
       date: '2023.01.01 - 2023.07.01',
       links: [
         {
@@ -77,7 +77,7 @@ const Portfolio = (): JSX.Element => {
         'sns 기능을 통해 식품을 공유할 수 있습니다.',
         'cron을 활용한 batch를 통해 알림 시스템을 구축하였습니다',
       ],
-      imgs: ['/images/food-zero-img-1.jpg', '/images/food-zero-img-2.jpg'],
+      imgs: ['https://in-ch.github.io/portfolio/images/food-zero-img-1.jpg', 'https://in-ch.github.io/portfolio/images/food-zero-img-2.jpg'],
       date: '2022.06.01 - 2022.09.01',
       links: [
         { title: 'Github Front', link: 'https://github.com/in-ch/food_zero' },
@@ -91,7 +91,7 @@ const Portfolio = (): JSX.Element => {
         'Batch 프로그램을 통해 전국 병원 정보를 수집하여 개원 자리할 자리의 경쟁 업체를 확인할 수 있습니다.',
         'Slack API & Notion API를 활용하여 문의 요청 시 알림 및 수집할 수 있도록 하였습니다.',
       ],
-      imgs: ['/images/dospot-img-1.jpg', '/images/dospot-img-2.jpg'],
+      imgs: ['https://in-ch.github.io/portfolio/images/dospot-img-1.jpg', 'https://in-ch.github.io/portfolio/images/dospot-img-2.jpg'],
       date: '2023.09.01 - 2024.03.01',
       links: [
         { title: 'Web', link: 'https://medi-pots.com' },
@@ -109,7 +109,7 @@ const Portfolio = (): JSX.Element => {
         'WebRTC를 활용하여 신규 기능으로써',
         '그룹 화상 채팅 기능 구현을 진행하였습니다.',
       ],
-      imgs: ['/images/home-img-3.png', '/images/home-img-2.png', '/images/home-img-1.png'],
+      imgs: ['https://in-ch.github.io/portfolio/images/home-img-3.png', 'https://in-ch.github.io/portfolio/images/home-img-2.png', 'https://in-ch.github.io/portfolio/images/home-img-1.png'],
       date: '2022.04.01 - 현재',
       links: [
         { title: '서비스 설명 보기', link: 'https://www.neofect.com/us/neofect-telerehab' },
@@ -128,7 +128,7 @@ const Portfolio = (): JSX.Element => {
         'Zapier Webhook을 통해 비지니스 문의를 분기 처리하였습니다.',
         '지도 SDK를 통해 사용병원 및 기관 페이지를 개발하였습니다.',
       ],
-      imgs: ['/images/neofect-1-img.gif', '/images/neofect-2-img.png', '/images/neofect-3-img.png'],
+      imgs: ['https://in-ch.github.io/portfolio/images/neofect-1-img.gif', 'https://in-ch.github.io/portfolio/images/neofect-2-img.png', 'https://in-ch.github.io/portfolio/images/neofect-3-img.png'],
       date: '2022.04.01 - 현재',
       links: [{ title: 'Web', link: '' }],
     },

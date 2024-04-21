@@ -5,10 +5,10 @@ import Header from '@/components/header';
 import Remote from '@/components/remote';
 
 export const metadata = {
-  title: '성인철 - 이력서',
+  title: 'inch - 이력서',
   description: '프론트엔드 개발자입니다.',
   openGraph: {
-    title: '성인철',
+    title: 'inch',
     description: '프론트엔드 개발자입니다.',
   },
 };

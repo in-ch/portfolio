@@ -7,6 +7,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const nextConfig = {
     output: "export",
+    basePath: "/portfolio",
     images: {
         domains: ['velog.velcdn.com','velog.io', 'in-ch.github.io']
     }

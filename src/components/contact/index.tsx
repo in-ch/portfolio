@@ -3,7 +3,7 @@
 import { FaGithub } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { SiVelog } from 'react-icons/si';
-// import { FaHome } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import Link from 'next/link';
 
 import TransitionText from '@/components/common/TransitionText';
@@ -48,10 +48,10 @@ const Contact = (): JSX.Element => {
               <SiVelog className="w-[30px] h-[30px]" />
               <p className="pl-4">https://velog.io/@sxin2949</p>
             </Link>
-            {/* <Link href="" target="_blank" className="flex items-center cursor-pointer">
+            <Link href="https://in-ch.github.io/portfolio" target="_blank" className="flex items-center cursor-pointer">
               <FaHome className="w-[30px] h-[30px]" />
-              <p className="pl-4">https://naver.com</p>
-            </Link> */}
+              <p className="pl-4">https://in-ch.github.io/portfolio</p>
+            </Link>
           </div>
         </div>
       </div>
