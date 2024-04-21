@@ -62,14 +62,14 @@ const About = (): JSX.Element => {
             <li>개발하는 것이 즐거워 훈련소에 개발 관련 서적을 들고가 뺏긴 전적이 있습니다.</li>
           </ul>
 
-          <div className="my-[30px] flex flex-row gap-4">
+          <div className="my-[30px] flex flex-row gap-4 z-[2] w-[200px]">
             <Link href="mailto:sxin2949@naver.com">
               <MdEmail className="w-[30px] h-[30px]" />
             </Link>
             <Link href="https://github.com/in-ch" target="_blank" className="cursor-pointer">
               <FaGithub className="w-[30px] h-[30px]" />
             </Link>
-            <Link href="https://velog.io/@sxin2949/posts" target="_blank">
+            <Link href="https://velog.io/@sxin2949" target="_blank">
               <SiVelog className="w-[30px] h-[30px]" />
             </Link>
           </div>

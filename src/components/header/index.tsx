@@ -1,11 +1,12 @@
 'use client';
 
+import { useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa6';
+import Link from 'next/link';
 
 import Hamburger from '@/components/header/hamburger';
 import { SECTION } from '@/enum';
 import { useMoveToSection } from '@/hooks/useMoveToSection';
-import { useEffect } from 'react';
 
 /**
  * @description 헤더 컴포넌트
@@ -39,7 +40,9 @@ const Header = (): JSX.Element => {
           <li onClick={() => handleMove(SECTION.blog)}>blog</li>
           <li onClick={() => handleMove(SECTION.contact)}>contact</li>
         </ul>
-        <FaGithub className="w-[25px] h-[25px]" />
+        <Link href="https://github.com/in-ch" target="_blank">
+          <FaGithub className="w-[25px] h-[25px]" />
+        </Link>
         <Hamburger handleMove={handleMove} />
       </div>
     </header>

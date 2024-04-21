@@ -1,5 +1,6 @@
-import { ItemType } from '@/types';
 import Image from 'next/image';
+
+import { ItemType } from '@/types';
 
 interface ItemProps {
   data: ItemType;

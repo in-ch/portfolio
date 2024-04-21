@@ -5,7 +5,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
     openAnalyzer: false,
 });
 
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        domains: ['velog.velcdn.com','velog.io']
+    }
+}
 
 // module.exports = withBundleAnalyzer(nextConfig)
 module.exports = nextConfig

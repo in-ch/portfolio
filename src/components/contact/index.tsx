@@ -3,7 +3,8 @@
 import { FaGithub } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { SiVelog } from 'react-icons/si';
-import { FaHome } from 'react-icons/fa';
+// import { FaHome } from 'react-icons/fa';
+import Link from 'next/link';
 
 import TransitionText from '@/components/common/TransitionText';
 import { SECTION } from '@/enum';
@@ -27,22 +28,30 @@ const Contact = (): JSX.Element => {
         </div>
         <div className="flex flex-1 items-start md:items-center justify-center">
           <div className="my-[30px] flex flex-col gap-4 pl-4 h-[200px] justify-center">
-            <div className="flex items-center cursor-pointer">
+            <Link href="mailto:sxin2949@naver.com" className="flex items-center cursor-pointer">
               <MdEmail className="w-[30px] h-[30px]" />
               <p className="pl-4">sxin2949@naver.com</p>
-            </div>
-            <div className="flex items-center cursor-pointer">
+            </Link>
+            <Link
+              href="https://github.com/in-ch"
+              target="_blank"
+              className="flex items-center cursor-pointer"
+            >
               <FaGithub className="w-[30px] h-[30px]" />
-              <p className="pl-4">https://naver.com</p>
-            </div>
-            <div className="flex items-center cursor-pointer">
+              <p className="pl-4">https://github.com/in-ch</p>
+            </Link>
+            <Link
+              href="https://velog.io/@sxin2949/posts"
+              target="_blank"
+              className="flex items-center cursor-pointer"
+            >
               <SiVelog className="w-[30px] h-[30px]" />
-              <p className="pl-4">https://naver.com</p>
-            </div>
-            <div className="flex items-center cursor-pointer">
+              <p className="pl-4">https://velog.io/@sxin2949</p>
+            </Link>
+            {/* <Link href="" target="_blank" className="flex items-center cursor-pointer">
               <FaHome className="w-[30px] h-[30px]" />
               <p className="pl-4">https://naver.com</p>
-            </div>
+            </Link> */}
           </div>
         </div>
       </div>
