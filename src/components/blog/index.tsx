@@ -36,8 +36,9 @@ const Blog = (): JSX.Element => {
       link: 'https://velog.io/@sxin2949/%EB%B2%88%EC%97%AD-State-in-React-is-Immutable',
     },
     {
-      title: '모달창 개선 작업 회고 ',
-      description: '자주 사용되던 컴포넌트 중에 하나인 모달창을 개선하는 작업을 진행하였습니다',
+      title: 'Lighthouse CI와 GitHub Actions를 통한 웹 성능 모니터링과 Slack 알림 연동하기',
+      description:
+        '개발을 자주 진행하다보면 Lighthouse 측정을 놓치는 경우가 있을 수 있는데 웹 사이트 성능을 지속적으로 모니터링하고 개선하는 것은 사용자들에게 더 나은 경험을 제공하고 검색 엔진 최적화(SEO)에도 도움이 됩니다.',
       img: 'https://velog.velcdn.com/images/sxin2949/post/22b99027-855d-4419-934c-77e46a8131de/image.png',
       date: '2024.03.04',
       link: 'https://velog.io/@sxin2949/%EA%BF%80%ED%8C%81-Lighthouse-CI%EC%99%80-GitHub-Actions%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%EA%B3%BC-Slack-%EC%95%8C%EB%A6%BC-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0',
